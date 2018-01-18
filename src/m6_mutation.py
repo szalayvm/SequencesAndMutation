@@ -133,7 +133,12 @@ def RETURN_replace_negatives_by_zeros(numbers):
     #          Make sure that you understand it.
     #          Then, IMPLEMENT and test THIS FUNCTION
     #          (using the above code for testing).
-    
+    new_list = numbers[:]
+
+    for k in range(len(new_list)):
+        if new_list[k]<0:
+            new_list[k] = 0
+    return new_list
 
 
 def run_test_MUTATE_replace_negatives_by_zeros():
@@ -190,6 +195,9 @@ def MUTATE_replace_negatives_by_zeros(numbers):
     #          Make sure that you understand it.
     #          Then, IMPLEMENT and test THIS FUNCTION
     #          (using the above code for testing).
+    for k in range(len(numbers)):
+        if numbers[k] < 0:
+            numbers[k] = 0
 
 # ----------------------------------------------------------------------
 # If this module is running at the top level (as opposed to being
